@@ -9,8 +9,6 @@ exports.getproduct = async (req, res) => {
 };
 exports.addproduct = async (req, res) => {
   const { Name, Price, Size, Image, Prices, Sizes } = req.body;
-  console.log(Image);
-  console.log("a");
   await new Product({
     Name: Name,
     Price: Price,
