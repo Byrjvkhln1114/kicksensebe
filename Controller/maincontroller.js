@@ -54,3 +54,8 @@ exports.Delete = async (req, res) => {
   const a = await Order.findByIdAndDelete(_id);
   res.send(a);
 };
+exports.deleteproduct = async (req, res) => {
+  const { _id } = req.body;
+  const a = await Product.findByIdAndDelete(_id);
+  res.send(a);
+};
