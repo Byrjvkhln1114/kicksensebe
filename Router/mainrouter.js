@@ -17,5 +17,5 @@ mainrouter.post("/createorder", createOrder);
 mainrouter.post("/getOrders", getOrders);
 mainrouter.put("/Approve", Approve);
 mainrouter.put("/Delete", Delete);
-mainrouter.delete("/delproduct", deleteproduct);
+// mainrouter.delete("/delproduct", deleteproduct);
 module.exports = mainrouter;
