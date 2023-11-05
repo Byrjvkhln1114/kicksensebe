@@ -5,7 +5,8 @@ exports.test = async (req, res) => {
 };
 exports.getproduct = async (req, res) => {
   const products = await Product.find({});
-  res.send(products);
+  // console.log(products);
+  res.send(await products);
 };
 exports.addproduct = async (req, res) => {
   const { Name, Price, Size, Image, Prices, Sizes } = req.body;
@@ -50,7 +51,11 @@ exports.Approve = async (req, res) => {
 };
 exports.Delete = async (req, res) => {
   const { _id } = req.body;
-
   const a = await Order.findByIdAndDelete(_id);
+  res.send(a);
+};
+exports.deleteproduct = async (req, res) => {
+  const { _id } = req.body;
+  const a = await Product.findByIdAndDelete(_id);
   res.send(a);
 };
